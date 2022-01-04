@@ -1,4 +1,8 @@
-<%= "#{@posts.size.to_s} posts found." %>
-<% @posts.each do |post| %>
-  <%= image_tag posts.image_url %>
-<% end %>
+<div class="row">
+  <div class="col-8">
+    <% @posts.each do |post| %>
+      <%= post.account.username %>
+      <%= image_tag post.image_url, class: "img img-fluid" %></td>
+    <% end %>
+  </div>  
+</div>
