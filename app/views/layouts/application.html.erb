@@ -14,7 +14,11 @@
   </head>
 
   <body>
-    <%= render 'shared/nav' %>
+    <% if account_signed_in? %>
+      <%= render 'shared/account' %>
+    <% else %>
+      <%= render 'shared/public' %>
+    <% end %>
     <div class="container">
     <%= yield %>
     </div>
