@@ -5,14 +5,17 @@
         <div class="post-meta">
           <%= post.account.username %>
         </div>
-        <%= image_tag post.image_url, class: "img img-fluid" %></td>
+        <%= image_tag post.image_url, class: "img img-fluid" %>
       </div>
     <% end %>
   </div>
   <div class="col-4">
     <div class="account-summary">
-      <%= current_account.username %> <br>
-      <%= current_account.full_name %> 
+      <p class=> <strong><%= current_account.username %></strong><br>
+      <%= current_account.full_name %> </p>
     </div>
+      <div class="follower-suggestions">
+        
+      </div>
   </div>
 </div>
