@@ -26,6 +26,17 @@ body {
   -o-border-radius: 50%;
 }
 
+.img-circle  {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  object-fit: contain;
+}
+
 .profile-status {
   width: 120px;
   float: left;
