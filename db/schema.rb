@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_04_141227) do
+ActiveRecord::Schema.define(version: 2022_01_05_122908) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,7 +28,10 @@ ActiveRecord::Schema.define(version: 2022_01_04_141227) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "username", limit: 20
+    t.string "image_data"
+    t.text "descriptin"
+    t.string "webstie"
+    t.string "username", limit: 50
     t.string "first_name", limit: 20
     t.string "last_name", limit: 20
     t.index ["email"], name: "index_accounts_on_email", unique: true
