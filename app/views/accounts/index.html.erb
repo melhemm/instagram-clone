@@ -8,7 +8,10 @@
         </div>
         <%= image_tag post.image_url, class: "img img-fluid" %>
           <div class="post-details">
-            <%= simple_format post.description %>
+            <p><strong><%= post.total_likes %> Likes</strong></p>
+            <strong><%= link_to post.account.username, profile_path(post.account.username), class: 'text-dark' %></strong> <%= simple_format post.description %>
+         
+           <p class="text-muted"> <%= time_ago_in_words post.created_at %> ago </p>
           </div>
       </div>
     <% end %>
