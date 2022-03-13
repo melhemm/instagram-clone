@@ -7,7 +7,12 @@
           <%= link_to post.account.username, profile_path(post.account.username), class: "text-dark" %>
         </div>
         <%= image_tag post.image_url, class: "img img-fluid" %>
+
           <div class="post-details">
+            <div class="post-actions">
+              <i class="fa fa-heart like-<%= post.id %> fa-2x post-like" data-id="<%= post.id %>"></i>
+              <i class="fa fa-comment fa-2x post-comment"></i>
+            </div>
             <p><strong><%= post.total_likes %> Likes</strong></p>
             <strong><%= link_to post.account.username, profile_path(post.account.username), class: 'text-dark' %></strong> <%= simple_format post.description %>
          
@@ -18,11 +23,14 @@
   </div>
   <div class="col-4">
     <div class="account-summary">
-      <p class=> <strong><%= current_account.username %></strong><br>
-      <%= current_account.full_name %> </p>
+      <p> 
+        <%= link_to image_tag(current_account.image_url, class: "img-circle"), profile_path(current_account.username) %>
+        <%= current_account.full_name %>
+      </p>
     </div>
       <div class="follower-suggestions">
-        
+        <%= link_to "View All", "#" , class:"float-right text-dark"%>
+        <p class="text-muted"> Suggestions for you </p>
       </div>
   </div>
 </div>

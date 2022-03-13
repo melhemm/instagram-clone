@@ -26,6 +26,7 @@ gem "shrine", "~> 3.0"
 gem "shrine-cloudinary", "~> 1.1"
 gem 'image_processing', '~> 1.12', '>= 1.12.1'
 gem 'fog', '~> 1.37.0'
+gem "font-awesome-rails"
 
 # Image resizing
 gem "mini_magick"

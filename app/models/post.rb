@@ -4,6 +4,8 @@ class Post < ApplicationRecord
 
   belongs_to :account
 
+  has_many :likes
+
   scope :active, -> { where active: true}
 
   def total_likes
