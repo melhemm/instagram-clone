@@ -4,10 +4,16 @@ class AccountsController < ApplicationController
 
   def index
     @posts = Post.active
+    @follower_suggestions = Account.where.not(id: current_account.id)
   end
 
   def profile
     @posts = @account.posts.active
+  end
+
+  def follow_account
+    account_id = params[:follow_id]
+    
   end
 
   private
