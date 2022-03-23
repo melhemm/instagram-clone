@@ -6,6 +6,7 @@ class Account < ApplicationRecord
 
   has_many :posts
   has_many :likes
+  has_many :comments
 
   default_scope { order(created_at: :desc) }
 

@@ -5,12 +5,13 @@ class Post < ApplicationRecord
   belongs_to :account
 
   has_many :likes
+  has_many :comments
 
   scope :active, -> { where active: true}
 
-  def total_likes
-    0
-  end
+  # def total_likes
+  #   0
+  # end
 
   private
 

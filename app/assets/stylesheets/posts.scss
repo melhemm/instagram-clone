@@ -30,4 +30,14 @@ img {
   i.active {
     color: red;
   }
+
+  .comment-box {
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+  }
+
+  .post-comment:focus {
+    box-shadow: none !important;
+  }
 }
