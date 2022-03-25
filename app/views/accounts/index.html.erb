@@ -44,8 +44,9 @@
   </div>
   <div class="col-4">
     <div class="account-summary">
-      <p> 
-        <%= link_to image_tag(current_account.image_url, class: "img-circle"), profile_path(current_account.username) if current_account.image_url.present? %>
+      <p class="m-0"> 
+        <%= link_to image_tag(current_account.image_url, class: "img-circle float-left m-r-10"), profile_path(current_account.username) if current_account.image_url.present? %>
+        <strong><%= current_account.username %></strong> <br>
         <%= current_account.full_name %>
       </p>
     </div>

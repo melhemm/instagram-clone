@@ -45,3 +45,21 @@ body {
 .profile-posts {
   margin-top: 50px;
 }
+
+.btn-custom {
+  background: transparent;
+  border: 2px solid #ddd !important;
+  border-radius: 4px !important;
+  -webkit-border-radius: 4px !important;
+  -moz-border-radius: 4px !important;
+  -ms-border-radius: 4px !important;
+  -o-border-radius: 4px !important;
+}
+
+.btn-custom:hover {
+  background: #ddd !important;
+}
+
+.m-r-10 {
+  margin-right: 10px;
+}
