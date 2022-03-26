@@ -27,17 +27,60 @@ img {
     cursor: pointer;
   }
 
+  i:hover {
+    color: #999;
+  }
+
   i.active {
     color: red;
   }
 
-  .comment-box {
-    padding: 15px;
-    background: #fff;
-    border: 1px solid #ddd;
-  }
 
-  .post-comment:focus {
-    box-shadow: none !important;
+}
+
+.comment-box {
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+.post-comment:focus {
+  box-shadow: none !important;
+}
+
+.comments-feed {
+  height: 300px;
+  overflow: scroll;
+}
+
+.post-details, .post-actions {
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.post-square {
+  height: 290px;
+  width: 290px;
+  overflow: hidden;
+  background-size: cover !important;
+}
+
+.post-stats {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #fff;
+  display: none;
+
+  .inner {
+    padding-top: 45%;
+  }
+}
+
+.insta-post:hover {
+  .post-stats {
+    display: block;
   }
 }

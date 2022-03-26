@@ -1,7 +1,10 @@
 $(document).on('turbolinks:load', function () {
   $(function(){
-    // page load 
-  $(".post-like").on("click", function(){
+    $('#post-comment').on('click', function() {
+      $("#comment_comment").focus();
+    });
+  
+    $(".post-like").on("click", function(){
     var post_id = $(this).data("id");
     $.ajax({
       url: "/post/like/"+post_id,

@@ -32,8 +32,15 @@
   <div class="row profile-posts">
     <% @posts.each do |post| %>
       <div class="col-4">
-        <div class="insta-post">
-          <%= image_tag post.image_url, class: "img img-fluid" %>
+        <div class="insta-post post-square" style="background: url(<%= post.image_url %>) no-repeat center top">
+          <%= link_to post_path(post) do %>
+            <div class="post-stats">
+              <div class="inner">
+                <i class="fa fa-heart"><%= post.total_likes_count %></i>
+                <i class="fa fa-comment m-l-15"><%= post.total_comments_count %></i>
+              </div>
+            </div>
+          <% end %>
         </div>
       </div>
     <% end %>
