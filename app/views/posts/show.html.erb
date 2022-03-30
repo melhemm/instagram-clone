@@ -14,7 +14,7 @@
       <div class="post-details">
         <div class="comments-feed">
           <%= simple_format @post.description %>
-          <%= render "comments/comments", post: @post %>
+          <%= render "comments/comments", post: @post, comments: @comments %>
         </div>
         
         <div class="post-actions">

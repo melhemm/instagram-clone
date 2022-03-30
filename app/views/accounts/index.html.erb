@@ -26,7 +26,7 @@
             <%= simple_format post.description %>
            <p class="text-muted"> <%= time_ago_in_words post.created_at %> ago </p>
 
-           <%= render "comments/comments", post: post %>
+           <%= render "comments/comments", post: post, comments: Comment.includes(:account).where(post_id: post.id) %>
           </div>
           <div>
             <div class="comment-box">
